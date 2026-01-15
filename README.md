@@ -37,19 +37,22 @@ Tudo isso utilizando apenas recursos nativos do PowerShell, compatível com **Po
 ## Sintaxe de uso
 
 ### Execução padrão (5 tentativas)
-
 ```powershell
 .\psping.ps1 8.8.8.8 443
 ```
-```Execução contínua (modo -t)
+
+Execução contínua (modo -t)
+```
 .\psping.ps1 8.8.8.8 443 -t
 ```
 
-```Ajustando timeout e intervalo entre probes
+Ajustando timeout e intervalo entre probes
+```
 .\psping.ps1 8.8.8.8 443 -t -TimeoutMs 3000 -IntervalMs 500
 ```
 
-```Script completo – psping.ps1
+Script completo – psping.ps1
+```
 param(
     [Parameter(Position = 0, Mandatory = $true)]
     [string]$TargetIP,
